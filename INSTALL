@@ -1,0 +1,4 @@
+# 1. Change to home dir
+cd ~
+# 2. Symlink the vimrc to a dotfile in your home dir
+ln -s ~/.vim/vimrc ~/.vimrc
