@@ -1,4 +1,12 @@
-# 1. Change to home dir
+#1. Change to home dir
 cd ~
-# 2. Symlink the vimrc to a dotfile in your home dir
+#2. Clone the git repo
+git clone git@github.com:gee-forr/vim-files.git ~/.vim
+#3. Link the vimrc to your ~/.vimrc
 ln -s ~/.vim/vimrc ~/.vimrc
+#4. Now initialise all plugins that are submoduled
+cd ~/.vim
+git submodule init
+git submodule update
+#5. Update ~/.vim/dbext with any db's you connect to, if required.
+#6. OPTIONAL - move any bundled plugins you don't want into ~/.vim/bundle_disabled

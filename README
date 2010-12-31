@@ -1,5 +1,7 @@
 Gabriel Fortuna's .vimrc file
 
+INSTALLATION: See the INSTALL file.
+
 I'm putting this out there so that everyone can benefit from years of obsessive
 and sustained stubborn effort to make vim as awesome as editors like textmate
 and textedit ultra, or whatever newfangled things you kids use nowadays.
@@ -16,3 +18,7 @@ A run down of what it does.
 7) Lots of shortcuts for editing multiple vim screens in a tabbed interface
 8) Complete code with tab in insert mode.
 9) Lots of other passive enhancements which just make vim more of a pleasure to use
+10) Most plugins are now available via git submodules. This is good for a few reasons:
+        1) They're always up to date
+        2) They are easy to install and/or disable
+        3) This vim-files repo doesn't get bloated.
