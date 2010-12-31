@@ -1,0 +1,2 @@
+Move plugins that you do not want to use into
+this dir. The pathogen plugin will then ignore them
