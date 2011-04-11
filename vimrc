@@ -35,6 +35,9 @@ set cmdheight=2
 set number
 highlight LineNr      term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE 
 
+"Set the font to Inconsolata at 18pt. (Yes, it's huge)
+set guifont=Inconsolata:h18
+
 "Do not redraw, when running macros.. lazyredraw
 set lazyredraw
 
