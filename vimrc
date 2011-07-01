@@ -94,8 +94,8 @@ if has("autocmd")
     filetype on
 
     autocmd WinEnter,FileType text setlocal    textwidth=78
-    autocmd WinEnter,FileType ruby colorscheme railscasts " Set ruby files to always use this awesome colorscheme
-    autocmd WinEnter,FileType Gemfile colorscheme railscasts " Set ruby files to always use this awesome colorscheme
+    "autocmd WinEnter,FileType ruby colorscheme railscasts " Set ruby files to always use this awesome colorscheme
+    "autocmd WinEnter,FileType Gemfile colorscheme railscasts " Set ruby files to always use this awesome colorscheme
 
     autocmd BufReadPost *
        \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -125,7 +125,8 @@ set smartindent
 set cindent
 
 " Set the contrast type. Is your background dark or light?
-set bg=dark
+set bg=light
+colorscheme solarized
 
 map ' :make<CR>
 map , :cnext<CR>
