@@ -125,8 +125,8 @@ set smartindent
 set cindent
 
 " Set the contrast type. Is your background dark or light?
-set bg=light
-colorscheme solarized
+set bg=dark
+colorscheme railscasts
 
 map ' :make<CR>
 map , :cnext<CR>
@@ -176,7 +176,7 @@ endif
 map <TAB> :Tlist<CR>
 map <leader><TAB> :Tlist<CR>
 " Point this to your ctags directory
-let Tlist_Ctags_Cmd               = '/opt/local/bin/ctags'
+let Tlist_Ctags_Cmd               = '/usr/bin/ctags'
 let Tlist_Display_Prototype       = 1
 let Tlist_Auto_Update             = 1
 let Tlist_Close_On_Select         = 1
