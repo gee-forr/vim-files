@@ -125,8 +125,8 @@ set smartindent
 set cindent
 
 " Set the contrast type. Is your background dark or light?
-set bg=light
-colorscheme solarized
+set bg=dark
+colorscheme railscasts
 
 map ' :make<CR>
 map , :cnext<CR>
