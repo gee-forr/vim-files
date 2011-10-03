@@ -176,7 +176,7 @@ endif
 map <TAB> :Tlist<CR>
 map <leader><TAB> :Tlist<CR>
 " Point this to your ctags directory
-let Tlist_Ctags_Cmd               = '/usr/bin/ctags'
+let Tlist_Ctags_Cmd               = '/opt/local/bin/ctags'
 let Tlist_Display_Prototype       = 1
 let Tlist_Auto_Update             = 1
 let Tlist_Close_On_Select         = 1
@@ -202,3 +202,19 @@ source $HOME/.vim/dbext.vim
 " useful for coding with Git as your SCM, as git's branches 
 " are changed in situ
 autocmd VimEnter * WatchForChanges
+
+" Be clever about pasting from somewhere into the terminal
+" Doesn't work with things like tmux and screen
+if &term =~ "xterm.*"
+    let &t_ti = &t_ti . "\e[?2004h"
+    let &t_te = "\e[?2004l" . &t_te
+    function XTermPasteBegin(ret)
+        set pastetoggle=<Esc>[201~
+        set paste
+        return a:ret
+    endfunction
+    map <expr> <Esc>[200~ XTermPasteBegin("i")
+    imap <expr> <Esc>[200~ XTermPasteBegin("")
+    cmap <Esc>[200~ <nop>
+    cmap <Esc>[201~ <nop>
+endif
