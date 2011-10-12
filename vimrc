@@ -145,9 +145,9 @@ nmap <silent> gc xph
 " Tab specific commands "
 "--------------------------------------------------
 set expandtab    "Convert all tabs typed into spaces"
-set tabstop=4    "An indentation level every four columns"
-set shiftwidth=4 "Indent/outdent by four columns"
-set softtabstop=4
+set tabstop=2    "An indentation level every four columns"
+set shiftwidth=2 "Indent/outdent by four columns"
+set softtabstop=2
 set shiftround   "Always indent/outdent to the nearest tabstop"
 try
   set switchbuf=usetab
@@ -218,3 +218,7 @@ if &term =~ "xterm.*"
     cmap <Esc>[200~ <nop>
     cmap <Esc>[201~ <nop>
 endif
+
+" NerdTree config
+let NERDSpaceDelims = 1
+let NERDDefaultNesting = 0
