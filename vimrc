@@ -125,7 +125,7 @@ set smartindent
 set cindent
 
 " Set the contrast type. Is your background dark or light?
-set bg=light
+set bg=dark
 colorscheme solarized
 
 map ' :make<CR>
@@ -226,3 +226,7 @@ let NERDDefaultNesting = 0
 "for Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=2
+
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
