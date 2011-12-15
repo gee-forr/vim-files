@@ -1,6 +1,6 @@
 " Taglist config
 map <TAB> :Tlist<CR>
-map <leader><TAB> :Tlist<CR>
+"map <leader><TAB> :Tlist<CR>
 
 " Point this to your ctags directory
 "let Tlist_Ctags_Cmd               = '/bin/ctags'
