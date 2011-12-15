@@ -1,0 +1,15 @@
+.DS_Store
+bundle/taglist/doc/tags
+sessions/
+*.swp
+bundle/dbext
+
+bundle/snipmate
+
+bundle/syntastic
+
+bundle/textobj-user
+
+bundle/dbext
+
+.gitignore

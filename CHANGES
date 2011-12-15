@@ -1,0 +1,17 @@
+2010-11-09
+
+Reorganised the dir structure to make it a little easier to move around.
+ 
+Will update plugins soon to use the pathogen plugin for organisation.
+
+----------
+
+2010-10-21
+
+Updated with lotsa nice new things... see .vim_readme. Hopefully the next update to this won't be in 5 years from now
+
+----------
+
+2006-04-06
+
+Initial upload... it's there, but needs figuring out from you.
