@@ -33,6 +33,8 @@ set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
 set number                      " Show line numbers
 set showmatch                   " Show matching brackets
+set bg=dark                     " Dark background
+"set bg=light                    " Light background
 
 function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
@@ -43,8 +45,8 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 "" Tab shortcuts
 map <leader>tn :tabnew %<cr>    " New
 map <leader>tc :tabclose<cr>    " Close
-map <leader>tm :tabmove         " Move
-map <leader>te :tabe            " Edit/Open existing
+map <leader>tm :tabmove
+map <leader>te :tabe
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
 
