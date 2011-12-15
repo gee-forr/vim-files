@@ -38,5 +38,16 @@ function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
   return curdir
 endfunction
-
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+
+"" Tab shortcuts
+map <leader>tn :tabnew %<cr>    " New
+map <leader>tc :tabclose<cr>    " Close
+map <leader>tm :tabmove         " Move
+map <leader>te :tabe            " Edit/Open existing
+map <leader><right> :tabn<cr>   " Select tab to the right
+map <leader><left> :tabp<cr>    " Select tab to the left
+
+"" Load up bundle specfic configuration
+""  -- doesn't clutter up the rest of the vimrc this way.
+runtime! bundle_config/*.vim
