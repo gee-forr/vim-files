@@ -20,6 +20,7 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set shiftround                  " Always indent/outdent to nearest tabstop
 set backspace=indent,eol,start  " backspace through everything in insert mode
+set pastetoggle=<leader>pt      " "Set  to toggle paste on and off.
 
 "" Searching
 set hlsearch                    " highlight matches
