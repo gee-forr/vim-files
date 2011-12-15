@@ -35,6 +35,7 @@ set number                      " Show line numbers
 set showmatch                   " Show matching brackets
 set bg=dark                     " Dark background
 "set bg=light                    " Light background
+colorscheme solarized
 
 function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
