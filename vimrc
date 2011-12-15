@@ -1,12 +1,13 @@
 call pathogen#infect()
 
 set nocompatible                " choose no compatibility with legacy vi
-syntax enable
+set nobackup                    " Do not keep a backup file
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 set laststatus=2
 set scrolloff=7                 " Never scroll to the edge of the window
 set history=50                  " Keep the last 50 commands
+syntax enable
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Folding
@@ -52,6 +53,30 @@ map <leader>tm :tabmove
 map <leader>te :tabe
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
+
+" Be clever about pasting from somewhere into the terminal
+" This detects a paste from the pasteboard and will temporarily
+" set pastetoggle
+" Doesn't work with things like tmux and screen
+if &term =~ "xterm.*"
+    let &t_ti = &t_ti . "\e[?2004h"
+    let &t_te = "\e[?2004l" . &t_te
+    function XTermPasteBegin(ret)
+        set pastetoggle=<Esc>[201~
+        set paste
+        return a:ret
+    endfunction
+    map <expr> <Esc>[200~ XTermPasteBegin("i")
+    imap <expr> <Esc>[200~ XTermPasteBegin("")
+    cmap <Esc>[200~ <nop>
+    cmap <Esc>[201~ <nop>
+endif
+
+" Make vim jump to the last known line
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 "" Load up bundle specfic configuration
 ""  -- doesn't clutter up the rest of the vimrc this way.
