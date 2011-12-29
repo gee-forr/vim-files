@@ -36,6 +36,7 @@ set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
 set number                      " Show line numbers
 set showmatch                   " Show matching brackets
+set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 set bg=dark                     " Dark background
 "set bg=light                    " Light background
 colorscheme solarized
