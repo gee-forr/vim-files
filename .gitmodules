@@ -19,3 +19,6 @@
 [submodule "bundle/ctrl_p"]
 	path = bundle/ctrl_p
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
