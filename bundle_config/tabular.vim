@@ -9,3 +9,5 @@
 "    call search(repeat('[^=]*=',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
 "  endif
 "endfunction
+
+map <leader>= :Tabularize /=<cr> " Map leader= to auto-align assigment blocks
