@@ -45,7 +45,7 @@ function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
   return curdir
 endfunction
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ %{fugitive#statusline()}\ \ \ Line:\ %l/%L:%c
 
 "" Tab shortcuts
 map <leader>tn :tabnew %<cr>    " New
