@@ -22,3 +22,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/ruby-minitest"]
+	path = bundle/ruby-minitest
+	url = https://github.com/sunaku/vim-ruby-minitest.git
