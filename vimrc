@@ -7,6 +7,7 @@ set showcmd                     " display incomplete commands
 set laststatus=2
 set scrolloff=7                 " Never scroll to the edge of the window
 set history=50                  " Keep the last 50 commands
+au FocusLost * :wa              " Autosave on losing focus (doesn't seem to work in the terminal)
 syntax enable
 filetype plugin indent on       " load file type plugins + indentation
 
@@ -28,13 +29,15 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+set gdefault                    " Make global search and replace the default (use /g to make it singular)
 set wildmenu
 
 "" Editor window dressing
 set t_Co=256                    " 256 colours
 set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
-set number                      " Show line numbers
+"set number                      " Show line numbers
+set relativenumber              " Show lines numbers relative to where you are
 set showmatch                   " Show matching brackets
 set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 set bg=dark                     " Dark background
