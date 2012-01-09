@@ -42,6 +42,7 @@ set showmatch                   " Show matching brackets
 set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 set bg=dark                     " Dark background
 "set bg=light                    " Light background
+set listchars=tab:▸\ ,eol:¬     " Make the list chars less hideous (and more like textmate)
 colorscheme solarized
 
 function! CurDir()
