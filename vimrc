@@ -83,6 +83,9 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+" Fix silly typos to DWIM, not DWIS
+map :W :w
+
 "" Load up bundle specfic configuration
 ""  -- doesn't clutter up the rest of the vimrc this way.
 runtime! bundle_config/*.vim
