@@ -25,3 +25,6 @@
 [submodule "bundle/ruby-minitest"]
 	path = bundle/ruby-minitest
 	url = https://github.com/sunaku/vim-ruby-minitest.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
