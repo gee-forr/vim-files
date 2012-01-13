@@ -55,7 +55,7 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ %{fugitive#statuslin
 map <leader>tn :tabnew %<cr>    " New
 map <leader>tc :tabclose<cr>    " Close
 map <leader>tm :tabmove
-map <leader>te :tabe
+map <leader>te :tabe 
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
 
