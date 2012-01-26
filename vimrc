@@ -31,6 +31,7 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set gdefault                    " Make global search and replace the default (use /g to make it singular)
 set wildmenu
+set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 
 "" Editor window dressing
 set t_Co=256                    " 256 colours

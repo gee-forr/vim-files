@@ -4,4 +4,4 @@ let g:ctrlp_open_multi    = '1t'    " When marking multiple files, open each of 
 let g:ctrlp_max_height    = 25      " Max height of window
 
 " Ignore git, hg and svn dirs and vim swap files
-set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
