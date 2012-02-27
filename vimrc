@@ -6,7 +6,6 @@ set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-set laststatus=2
 set scrolloff=7                 " Never scroll to the edge of the window
 set history=50                  " Keep the last 50 commands
 set t_ti= t_te=                 " Do not clear the screen when exiting vim, and preserve the window
@@ -55,7 +54,10 @@ function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
   return curdir
 endfunction
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ %{fugitive#statusline()}\ \ \ Line:\ %l/%L:%c
+set laststatus=2                " Show statusline on second last line
+set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\ 
+
+set statusline=%F%m%r%h%w\ [type=%Y]\ [%p%%]\ [len=%L]
 
 "" Tab shortcuts
 map <leader>tn :tabnew %<cr>    " New
