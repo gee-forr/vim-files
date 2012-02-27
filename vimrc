@@ -25,6 +25,9 @@ set expandtab                   " use spaces, not tabs (optional)
 set shiftround                  " Always indent/outdent to nearest tabstop
 set backspace=indent,eol,start  " backspace through everything in insert mode
 set pastetoggle=<leader>pt      " "Set  to toggle paste on and off.
+"" Highlight trailing whitespace
+highlight TrailWhitespace ctermbg=red guibg=red
+match TrailWhitespace /\s\+$\| \+\ze\t/
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -57,8 +60,6 @@ endfunction
 set laststatus=2                " Show statusline on second last line
 set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\ 
 
-set statusline=%F%m%r%h%w\ [type=%Y]\ [%p%%]\ [len=%L]
-
 "" Tab shortcuts
 map <leader>tn :tabnew %<cr>    " New
 map <leader>tc :tabclose<cr>    " Close
@@ -67,15 +68,15 @@ map <leader>te :tabe
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
 
-" Make working with brackets a little easier
+"" Make working with brackets a little easier
 imap { {}<left>
 imap ( ()<left>
 imap [ []<left>
 
-" Be clever about pasting from somewhere into the terminal
-" This detects a paste from the pasteboard and will temporarily
-" set pastetoggle
-" Doesn't work with things like tmux and screen
+"" Be clever about pasting from somewhere into the terminal
+"" This detects a paste from the pasteboard and will temporarily
+"" set pastetoggle
+"" Doesn't work with things like tmux and screen
 if &term =~ "xterm.*"
     let &t_ti = &t_ti . "\e[?2004h"
     let &t_te = "\e[?2004l" . &t_te
@@ -90,13 +91,13 @@ if &term =~ "xterm.*"
     cmap <Esc>[201~ <nop>
 endif
 
-" Make vim jump to the last known line
+"" Make vim jump to the last known line
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
 
-" Fix silly typos to DWIM, not DWIS
+"" Fix silly typos to DWIM, not DWIS
 map :W :w
 map :Wq :wq
 map :WQ :WQ
