@@ -1,5 +1,7 @@
 call pathogen#infect()
 
+au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
+
 set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
@@ -62,6 +64,11 @@ map <leader>tm :tabmove
 map <leader>te :tabe 
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
+
+" Make working with brackets a little easier
+imap { {}<left>
+imap ( ()<left>
+imap [ []<left>
 
 " Be clever about pasting from somewhere into the terminal
 " This detects a paste from the pasteboard and will temporarily
