@@ -40,6 +40,8 @@ set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
 "set number                      " Show line numbers
 set relativenumber              " Show lines numbers relative to where you are
+au InsertEnter * :set nu        " absolute line numbers in insert mode, 
+au InsertLeave * :set rnu       " relative otherwise for easy movement
 set showmatch                   " Show matching brackets
 set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 set bg=dark                     " Dark background
