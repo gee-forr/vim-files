@@ -25,9 +25,6 @@ set expandtab                   " use spaces, not tabs (optional)
 set shiftround                  " Always indent/outdent to nearest tabstop
 set backspace=indent,eol,start  " backspace through everything in insert mode
 set pastetoggle=<leader>pt      " "Set  to toggle paste on and off.
-"" Highlight trailing whitespace
-highlight TrailWhitespace ctermbg=red guibg=red
-match TrailWhitespace /\s\+$\| \+\ze\t/
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -44,7 +41,7 @@ set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
 "set number                      " Show line numbers
 set relativenumber              " Show lines numbers relative to where you are
-au InsertEnter * :set nu        " absolute line numbers in insert mode, 
+au InsertEnter * :set nu        " absolute line numbers in insert mode,
 au InsertLeave * :set rnu       " relative otherwise for easy movement
 set showmatch                   " Show matching brackets
 set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
@@ -105,3 +102,7 @@ map :WQ :WQ
 "" Load up bundle specfic configuration
 ""  -- doesn't clutter up the rest of the vimrc this way.
 runtime! bundle_config/*.vim
+
+"" Highlight trailing whitespace
+highlight TrailWhitespace ctermbg=red guibg=red
+match TrailWhitespace /\s\+$\| \+\ze\t/
