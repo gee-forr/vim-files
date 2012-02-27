@@ -2,6 +2,7 @@ call pathogen#infect()
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
+set clipboard=unnamed           " send yanks to the OS clipboard
 set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
@@ -36,6 +37,7 @@ set wildmenu
 set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 
 "" Editor window dressing
+colorscheme solarized
 set t_Co=256                    " 256 colours
 set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
@@ -47,8 +49,8 @@ set showmatch                   " Show matching brackets
 set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 set bg=dark                     " Dark background
 "set bg=light                    " Light background
-set listchars=tab:▸\ ,eol:¬     " Make the list chars less hideous (and more like textmate)
-colorscheme solarized
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮ " Make the list chars less hideous (and more like textmate)
+set showbreak=↪
 
 function! CurDir()
   let curdir = substitute(getcwd(), '/home/gabrielf/', "~/", "g")
