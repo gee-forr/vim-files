@@ -2,7 +2,7 @@ call pathogen#infect()
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
-set clipboard=unnamed           " send yanks to the OS clipboard
+"set clipboard=unnamed           " send yanks to the OS clipboard
 set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
@@ -13,6 +13,10 @@ set t_ti= t_te=                 " Do not clear the screen when exiting vim, and 
 au FocusLost * :wa              " Autosave on losing focus (doesn't seem to work in the terminal)
 syntax enable
 filetype plugin indent on       " load file type plugins + indentation
+
+" Store temporary files in a central spot
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 "" Folding
 "set nofoldenable
@@ -105,6 +109,6 @@ map :WQ :WQ
 ""  -- doesn't clutter up the rest of the vimrc this way.
 runtime! bundle_config/*.vim
 
-"" Highlight trailing whitespace
-highlight TrailWhitespace ctermbg=red guibg=red
-match TrailWhitespace /\s\+$\| \+\ze\t/
+""" Highlight trailing whitespace
+"highlight TrailWhitespace ctermbg=red guibg=red
+"match TrailWhitespace /\s\+$\| \+\ze\t/
