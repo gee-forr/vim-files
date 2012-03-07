@@ -2,6 +2,7 @@ call pathogen#infect()
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
+"" Some general editor stuff
 "set clipboard=unnamed           " send yanks to the OS clipboard
 set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
