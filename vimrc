@@ -73,9 +73,9 @@ map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
 
 "" Make working with brackets a little easier
-imap { {}<left>
-imap ( ()<left>
-imap [ []<left>
+"imap { {}<left>
+"imap ( ()<left>
+"imap [ []<left>
 
 "" Be clever about pasting from somewhere into the terminal
 "" This detects a paste from the pasteboard and will temporarily
