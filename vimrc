@@ -72,10 +72,11 @@ map <leader>te :tabe
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
 
-"" Make working with brackets a little easier
-"imap { {}<left>
-"imap ( ()<left>
-"imap [ []<left>
+"" Split window shortcuts
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 "" Be clever about pasting from somewhere into the terminal
 "" This detects a paste from the pasteboard and will temporarily
