@@ -11,7 +11,7 @@ set showcmd                     " display incomplete commands
 set scrolloff=7                 " Never scroll to the edge of the window
 set history=50                  " Keep the last 50 commands
 set t_ti= t_te=                 " Do not clear the screen when exiting vim, and preserve the window
-au FocusLost * :wa              " Autosave on losing focus (doesn't seem to work in the terminal)
+au FocusLost * :silent! wall    " Autosave on losing focus (works in iTerms2 and tmux using VITality plugin)
 syntax enable
 filetype plugin indent on       " load file type plugins + indentation
 
