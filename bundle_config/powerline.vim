@@ -5,4 +5,3 @@ let g:Powerline_symbols = 'fancy'
 
 " Short file names.
 let g:Powerline_stl_path_style = "short"
-
