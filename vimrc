@@ -103,9 +103,8 @@ if has("autocmd")
 endif
 
 "" Fix silly typos to DWIM, not DWIS
-map :W :w
-map :Wq :wq
-map :WQ :WQ
+cmap W w
+cmap Q q
 
 "" Load up bundle specfic configuration
 ""  -- doesn't clutter up the rest of the vimrc this way.
