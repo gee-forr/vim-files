@@ -71,6 +71,8 @@ map <leader>tm :tabmove
 map <leader>te :tabe 
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
+map <leader>k :tabn<cr>         " Select tab to the right using k
+map <leader>j :tabp<cr>         " Select tab to the left using j
 
 "" Split window shortcuts
 nmap <silent> <A-Up> :wincmd k<CR>
