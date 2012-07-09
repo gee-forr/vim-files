@@ -65,12 +65,14 @@ set laststatus=2                " Show statusline on second last line
 set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\ 
 
 "" Tab shortcuts
-map <leader>tn :tabnew %<cr>    " New
-map <leader>tc :tabclose<cr>    " Close
-map <leader>tm :tabmove
+map <leader>tn :tabnew 
+map <leader>tm :tabmove 
 map <leader>te :tabe 
+map <leader>tc :tabclose<cr>    " Close
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
+map <leader>k :tabn<cr>         " Select tab to the right using k
+map <leader>j :tabp<cr>         " Select tab to the left using j
 
 "" Split window shortcuts
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -103,9 +105,8 @@ if has("autocmd")
 endif
 
 "" Fix silly typos to DWIM, not DWIS
-map :W :w
-map :Wq :wq
-map :WQ :WQ
+cmap W w
+cmap Q q
 
 "" Load up bundle specfic configuration
 ""  -- doesn't clutter up the rest of the vimrc this way.
