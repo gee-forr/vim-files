@@ -65,7 +65,7 @@ set laststatus=2                " Show statusline on second last line
 set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\ 
 
 "" Tab shortcuts
-map <leader>tn :tabnew %<cr>    " New
+map <leader>tn :tabnew<cr>      " New
 map <leader>tc :tabclose<cr>    " Close
 map <leader>tm :tabmove
 map <leader>te :tabe 
