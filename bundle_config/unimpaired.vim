@@ -1,7 +1,7 @@
 " See http://vimcasts.org/episodes/bubbling-text/
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <D-S-Up> [e
+nmap <D-S-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <D-S-Up> [egv
+vmap <D-S-Down> ]egv
