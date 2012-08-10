@@ -5,6 +5,7 @@ let g:ctrlp_max_height          = 25      " Max height of window
 let g:ctrlp_switch_buffer       = 2
 let g:ctrlp_clear_cache_on_exit = 1       " Delete cache of files on exit
 let g:ctrlp_mruf_max            = 250     " Remember this many recently used files
+let g:ctrlp_root_markers        = ['Gemfile']
 
 " Ignore git, hg and svn dirs and vim swap files
 let g:ctrlp_custom_ignore = {
