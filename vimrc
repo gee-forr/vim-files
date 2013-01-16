@@ -105,7 +105,7 @@ if has("autocmd")
 endif
 
 "" Fix silly typos to DWIM, not DWIS
-cmap W w
+"cmap W w
 cmap Q q
 
 "" Load up bundle specfic configuration
