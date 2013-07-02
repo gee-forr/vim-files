@@ -1,10 +1,52 @@
-call pathogen#infect()
+set nocompatible                " choose no compatibility with legacy vi
+set filetype off                " Set this off whilst we do our Vundle thing
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'           " let Vundle manage Vundle required! 
+
+" Motion utilities
+Bundle "vim-scripts/matchit.zip"            " Auto match for closing braces, etc
+Bundle "Lokaltog/vim-easymotion"            " Amazing util to jump around text
+Bundle "kien/ctrlp.vim"                     " Easily jump to files
+
+" Interface tweaks
+Bundle "Lokaltog/vim-powerline"             " Pretty statusbar
+Bundle "sjl/vitality.vim"                   " Make vim play nicely with tmux and iterm2
+Bundle "altercation/vim-colors-solarized"   " Sensible colour scheme
+" Bundle 'nathanaelkane/vim-indent-guides'
+
+" Ruby utils
+Bundle "vim-scripts/ruby-matchit"           " Matching tools for x/end blocks
+Bundle "vim-ruby/vim-ruby"                  " Ruby utils
+Bundle "tpope/vim-rails"                    " Rails utils
+Bundle "tpope/vim-endwise"                  " Auto-add end statements
+Bundle "kchmck/vim-coffee-script"           " Syntax for coffeescript
+" Bundle 'tpope/vim-bundler'                  " Bundler utils
+" Bundle 'sunaku/vim-ruby-minitest'
+
+" General dev utils
+Bundle "airblade/vim-gitgutter"             " Show git changes in left gutter
+Bundle "scrooloose/syntastic"               " Error checking
+Bundle "tpope/vim-fugitive"                 " Git utils
+Bundle "ervandew/supertab"                  " Make tab a little more clever
+Bundle "godlygeek/tabular"                  " Align things like assignment blocks
+Bundle "msanders/snipmate.vim"              " Snippet management
+Bundle "majutsushi/tagbar"                  " A drawer for browsing a class
+Bundle "tpope/vim-surround"                 " Manipulate surrounding quotes, parens, etc
+Bundle "scrooloose/nerdtree"                " A drawer for browsing files
+Bundle "scrooloose/nerdcommenter"           " Easy mass commenting
+Bundle "mileszs/ack.vim"                    " Better grepping
+Bundle "kana/vim-smartinput"                " Smart quote and bracket typing
+" Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
+" Bundle 'tpope/vim-unimpaired'
+" Bundle 'Shougo/neocomplcache'
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
 "" Some general editor stuff
 "set clipboard=unnamed           " send yanks to the OS clipboard
-set nocompatible                " choose no compatibility with legacy vi
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
 set showcmd                     " display incomplete commands
