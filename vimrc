@@ -1,44 +1,70 @@
 set nocompatible                " choose no compatibility with legacy vi
-set filetype off                " Set this off whilst we do our Vundle thing
+filetype off                    " Set this off whilst we do our Vundle thing
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'           " let Vundle manage Vundle required! 
+" let Vundle manage Vundle required! 
+Bundle 'gmarik/vundle' 
 
-" Motion utilities
-Bundle "vim-scripts/matchit.zip"            " Auto match for closing braces, etc
-Bundle "Lokaltog/vim-easymotion"            " Amazing util to jump around text
-Bundle "kien/ctrlp.vim"                     " Easily jump to files
+" --- Motion utilities
+" Auto match for closing braces, etc
+Bundle "vim-scripts/matchit.zip"            
+" Amazing util to jump around text
+Bundle "Lokaltog/vim-easymotion"            
+" Easily jump to files
+Bundle "kien/ctrlp.vim"                     
 
-" Interface tweaks
-Bundle "Lokaltog/vim-powerline"             " Pretty statusbar
-Bundle "sjl/vitality.vim"                   " Make vim play nicely with tmux and iterm2
-Bundle "altercation/vim-colors-solarized"   " Sensible colour scheme
+" --- Interface tweaks
+" Pretty statusbar
+Bundle "Lokaltog/vim-powerline"             
+" Make vim play nicely with tmux and iterm2
+Bundle "sjl/vitality.vim"                   
+" Sensible colour scheme
+Bundle "altercation/vim-colors-solarized"   
 " Bundle 'nathanaelkane/vim-indent-guides'
+" Watch for file updates
+Bundle 'file:///Users/gabrielf/.vimrc/bundle/watch_for_changes'
 
+" --- Ruby utils
+" Matching tools for x/end blocks
+Bundle "vim-scripts/ruby-matchit"           
 " Ruby utils
-Bundle "vim-scripts/ruby-matchit"           " Matching tools for x/end blocks
-Bundle "vim-ruby/vim-ruby"                  " Ruby utils
-Bundle "tpope/vim-rails"                    " Rails utils
-Bundle "tpope/vim-endwise"                  " Auto-add end statements
-Bundle "kchmck/vim-coffee-script"           " Syntax for coffeescript
+Bundle "vim-ruby/vim-ruby"                  
+" Rails utils
+Bundle "tpope/vim-rails"                    
+" Auto-add end statements
+Bundle "tpope/vim-endwise"                  
+" Syntax for coffeescript
+Bundle "kchmck/vim-coffee-script"           
 " Bundle 'tpope/vim-bundler'                  " Bundler utils
 " Bundle 'sunaku/vim-ruby-minitest'
 
-" General dev utils
-Bundle "airblade/vim-gitgutter"             " Show git changes in left gutter
-Bundle "scrooloose/syntastic"               " Error checking
-Bundle "tpope/vim-fugitive"                 " Git utils
-Bundle "ervandew/supertab"                  " Make tab a little more clever
-Bundle "godlygeek/tabular"                  " Align things like assignment blocks
-Bundle "msanders/snipmate.vim"              " Snippet management
-Bundle "majutsushi/tagbar"                  " A drawer for browsing a class
-Bundle "tpope/vim-surround"                 " Manipulate surrounding quotes, parens, etc
-Bundle "scrooloose/nerdtree"                " A drawer for browsing files
-Bundle "scrooloose/nerdcommenter"           " Easy mass commenting
-Bundle "mileszs/ack.vim"                    " Better grepping
-Bundle "kana/vim-smartinput"                " Smart quote and bracket typing
+" --- General dev utils
+" Show git changes in left gutter
+Bundle "airblade/vim-gitgutter"             
+" Error checking
+Bundle "scrooloose/syntastic"               
+" Git utils
+Bundle "tpope/vim-fugitive"                 
+" Make tab a little more clever
+Bundle "ervandew/supertab"                  
+" Align things like assignment blocks
+Bundle "godlygeek/tabular"                  
+" Snippet management
+Bundle "msanders/snipmate.vim"              
+" A drawer for browsing a class
+Bundle "majutsushi/tagbar"                  
+" Manipulate surrounding quotes, parens, etc
+Bundle "tpope/vim-surround"                 
+" A drawer for browsing files
+Bundle "scrooloose/nerdtree"                
+" Easy mass commenting
+Bundle "scrooloose/nerdcommenter"           
+" Better grepping
+Bundle "mileszs/ack.vim"                    
+" Smart quote and bracket typing
+Bundle "kana/vim-smartinput"                
 " Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 " Bundle 'tpope/vim-unimpaired'
 " Bundle 'Shougo/neocomplcache'
