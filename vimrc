@@ -115,3 +115,12 @@ runtime! bundle_config/*.vim
 """ Highlight trailing whitespace
 "highlight TrailWhitespace ctermbg=red guibg=red
 "match TrailWhitespace /\s\+$\| \+\ze\t/
+
+" Speed up start times when dealing with Ruby files
+" For rbenv
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+" For rvm
+"let g:ruby_path = system('rvm current')
+
+" Abbreviations
+iabbrev trye true
