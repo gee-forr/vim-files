@@ -16,6 +16,7 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle "kien/ctrlp.vim"                     
 
 " --- Interface tweaks
+Bundle 'TabBar'
 " Pretty statusbar
 Bundle "Lokaltog/vim-powerline"             
 " Make vim play nicely with tmux and iterm2
