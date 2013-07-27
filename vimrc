@@ -51,10 +51,10 @@ Bundle "tpope/vim-fugitive"
 Bundle "ervandew/supertab"                  
 " Align things like assignment blocks
 Bundle "godlygeek/tabular"                  
-" Snippet management
-Bundle "msanders/snipmate.vim"              
 " A drawer for browsing a class
 Bundle "majutsushi/tagbar"                  
+" Snippet management
+Bundle "msanders/snipmate.vim"              
 " Manipulate surrounding quotes, parens, etc
 Bundle "tpope/vim-surround"                 
 " A drawer for browsing files
@@ -68,6 +68,7 @@ Bundle "kana/vim-smartinput"
 " Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 " Bundle 'tpope/vim-unimpaired'
 " Bundle 'Shougo/neocomplcache'
+Bundle "Yggdroot/indentLine"
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
