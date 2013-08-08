@@ -53,8 +53,12 @@ Bundle "ervandew/supertab"
 Bundle "godlygeek/tabular"                  
 " A drawer for browsing a class
 Bundle "majutsushi/tagbar"                  
+
 " Snippet management
-Bundle "msanders/snipmate.vim"              
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"              
+"
 " Manipulate surrounding quotes, parens, etc
 Bundle "tpope/vim-surround"                 
 " A drawer for browsing files
@@ -74,6 +78,7 @@ au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
 "" Some general editor stuff
 "set clipboard=unnamed           " send yanks to the OS clipboard
+set mouse=a
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
 set showcmd                     " display incomplete commands
