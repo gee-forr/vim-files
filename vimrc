@@ -24,7 +24,7 @@ Bundle "sjl/vitality.vim"
 Bundle "altercation/vim-colors-solarized"   
 " Bundle 'nathanaelkane/vim-indent-guides'
 " Watch for file updates
-Bundle 'file:///Users/gabrielf/.vimrc/bundle/watch_for_changes'
+Bundle 'gee-forr/vim-watch_for_changes'
 
 " --- Ruby utils
 " Matching tools for x/end blocks
