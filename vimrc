@@ -31,12 +31,12 @@ Bundle "vim-scripts/ruby-matchit"
 Bundle "vim-ruby/vim-ruby"                  
 Bundle "tpope/vim-rails"                    
 Bundle "tpope/vim-endwise"                  
-"Bundle "kchmck/vim-coffee-script"           
+Bundle "kchmck/vim-coffee-script"           
 "Bundle 'tpope/vim-bundler'                  " Bundler utils
 "Bundle 'sunaku/vim-ruby-minitest'
 
 " --- General dev utils
-Bundle 'adamlowe/vim-slurper'
+Bundle 'gee-forr/vim-slurper'
 Bundle "airblade/vim-gitgutter"             
 Bundle "scrooloose/syntastic"               
 Bundle "tpope/vim-fugitive"                 
@@ -49,6 +49,9 @@ Bundle "scrooloose/nerdcommenter"
 Bundle "mileszs/ack.vim"                    
 Bundle "kana/vim-smartinput"                
 Bundle "Yggdroot/indentLine"
+Bundle 'Keithbsmiley/investigate.vim'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'jgdavey/tslime.vim'
 "Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 "Bundle 'tpope/vim-unimpaired'
 "Bundle 'Shougo/neocomplcache'
