@@ -50,8 +50,8 @@ Bundle "mileszs/ack.vim"
 Bundle "kana/vim-smartinput"                
 Bundle "Yggdroot/indentLine"
 Bundle 'Keithbsmiley/investigate.vim'
+Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
-Bundle 'jgdavey/tslime.vim'
 "Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 "Bundle 'tpope/vim-unimpaired'
 "Bundle 'Shougo/neocomplcache'
