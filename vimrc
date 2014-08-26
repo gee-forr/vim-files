@@ -15,6 +15,7 @@ Bundle "kien/ctrlp.vim"
 Bundle "Lokaltog/vim-powerline"             
 Bundle "sjl/vitality.vim"                   
 Bundle "altercation/vim-colors-solarized"   
+Bundle "junegunn/seoul256.vim"
 "Bundle "gcmt/taboo.vim"
 "Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 "Bundle 'jgdavey/vim-railscasts'
@@ -45,6 +46,7 @@ Bundle "godlygeek/tabular"
 Bundle "majutsushi/tagbar"                  
 Bundle "tpope/vim-surround"                 
 Bundle "scrooloose/nerdtree"                
+Bundle "jistr/vim-nerdtree-tabs"
 Bundle "scrooloose/nerdcommenter"           
 Bundle "mileszs/ack.vim"                    
 Bundle "kana/vim-smartinput"                
@@ -103,7 +105,10 @@ set wildmenu
 set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 
 "" Editor window dressing
-colorscheme solarized
+"colorscheme solarized
+"let g:seoul256_background = 226
+let g:seoul256_background=235
+colorscheme seoul256
 set t_Co=256                    " 256 colours
 set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
