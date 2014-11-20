@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 Bundle "vim-scripts/matchit.zip"            
 Bundle "Lokaltog/vim-easymotion"            
 Bundle "kien/ctrlp.vim"                     
+Bundle "terryma/vim-expand-region"
 
 " --- Interface tweaks
 Bundle "mhinz/vim-startify"
@@ -84,6 +85,7 @@ filetype plugin indent on       " load file type plugins + indentation
 let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nmap <Leader><Leader> V
 
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
