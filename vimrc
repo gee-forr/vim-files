@@ -12,15 +12,16 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle "kien/ctrlp.vim"                     
 
 " --- Interface tweaks
+Bundle "mhinz/vim-startify"
 Bundle "Lokaltog/vim-powerline"             
 Bundle "sjl/vitality.vim"                   
 Bundle "altercation/vim-colors-solarized"   
-Bundle "junegunn/seoul256.vim"
+"Bundle "junegunn/seoul256.vim"
 "Bundle "gcmt/taboo.vim"
 "Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 "Bundle 'jgdavey/vim-railscasts'
 "Bundle 'tomasr/molokai'
-"Bundle 'morhetz/gruvbox'
+Bundle 'morhetz/gruvbox'
 "Bundle 'sjl/badwolf'
 "Bundle 'nanotech/jellybeans.vim'
 
@@ -54,6 +55,7 @@ Bundle "Yggdroot/indentLine"
 Bundle 'Keithbsmiley/investigate.vim'
 Bundle 'benmills/vimux'
 Bundle 'jgdavey/vim-turbux'
+Bundle 'travitch/hasksyn'
 "Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 "Bundle 'tpope/vim-unimpaired'
 "Bundle 'Shougo/neocomplcache'
@@ -107,8 +109,14 @@ set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 "" Editor window dressing
 "colorscheme solarized
 "let g:seoul256_background = 226
-let g:seoul256_background=235
-colorscheme seoul256
+"let g:seoul256_background=235
+"colorscheme seoul256
+if !has("gui_running")
+  let g:gruvbox_italic=0
+endif
+
+colorscheme gruvbox
+
 set t_Co=256                    " 256 colours
 set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
