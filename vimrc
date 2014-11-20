@@ -69,6 +69,7 @@ au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
 "" Some general editor stuff
 "set clipboard=unnamed           " send yanks to the OS clipboard
+let mapleader = "\<Space>"
 set mouse=a
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
