@@ -69,7 +69,6 @@ au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
 "" Some general editor stuff
 "set clipboard=unnamed           " send yanks to the OS clipboard
-let mapleader = "\<Space>"
 set mouse=a
 set nobackup                    " Do not keep a backup file
 set encoding=utf-8
@@ -80,6 +79,11 @@ set t_ti= t_te=                 " Do not clear the screen when exiting vim, and 
 au FocusLost * :silent! wall    " Autosave on losing focus (works in iTerms2 and tmux using VITality plugin)
 syntax enable
 filetype plugin indent on       " load file type plugins + indentation
+
+" Leader stuff
+let mapleader = "\<Space>"
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
 
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
