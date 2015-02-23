@@ -13,9 +13,9 @@ Bundle "kien/ctrlp.vim"
 Bundle "terryma/vim-expand-region"
 
 " --- Interface tweaks
-Bundle "mhinz/vim-startify"
+"Bundle "mhinz/vim-startify"
 Bundle "Lokaltog/vim-powerline"             
-Bundle "sjl/vitality.vim"                   
+Bundle "sjl/vitality.vim"
 Bundle "altercation/vim-colors-solarized"   
 "Bundle "junegunn/seoul256.vim"
 "Bundle "gcmt/taboo.vim"
@@ -37,9 +37,12 @@ Bundle "tpope/vim-endwise"
 Bundle "kchmck/vim-coffee-script"           
 "Bundle 'tpope/vim-bundler'                  " Bundler utils
 "Bundle 'sunaku/vim-ruby-minitest'
+Bundle 'heartsentwined/vim-emblem'
 
 " --- General dev utils
 Bundle 'gee-forr/vim-slurper'
+Bundle 'EinfachToll/DidYouMean'
+Bundle 'dietsche/vim-lastplace'
 Bundle "airblade/vim-gitgutter"             
 Bundle "scrooloose/syntastic"               
 Bundle "tpope/vim-fugitive"                 
@@ -53,9 +56,9 @@ Bundle "scrooloose/nerdcommenter"
 Bundle "mileszs/ack.vim"                    
 Bundle "kana/vim-smartinput"                
 Bundle "Yggdroot/indentLine"
-Bundle 'Keithbsmiley/investigate.vim'
-Bundle 'benmills/vimux'
-Bundle 'jgdavey/vim-turbux'
+"Bundle 'Keithbsmiley/investigate.vim'
+"Bundle 'benmills/vimux'
+"Bundle 'jgdavey/vim-turbux'
 Bundle 'travitch/hasksyn'
 "Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 "Bundle 'tpope/vim-unimpaired'
@@ -118,9 +121,6 @@ set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 "let g:seoul256_background = 226
 "let g:seoul256_background=235
 "colorscheme seoul256
-if !has("gui_running")
-  let g:gruvbox_italic=0
-endif
 
 colorscheme gruvbox
 
