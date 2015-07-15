@@ -9,7 +9,7 @@ let g:ctrlp_root_markers        = ['Gemfile']
 
 " Ignore git, hg and svn dirs and vim swap files
 let g:ctrlp_custom_ignore = {
-    \ 'dir': 'bundler_stubs\|tmp\|\.git$\|\.hg$\|\.svn$',
+    \ 'dir': 'bundler_stubs\|tmp\|\.git$\|\.hg$\|\.svn$\|node_modules\|bower_components',
     \ 'file': '\.exe$\|\.so$\|\.dll$',
     \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 \ }
