@@ -8,7 +8,9 @@ Bundle 'gmarik/vundle'
 
 " --- Motion utilities
 Bundle "vim-scripts/matchit.zip"            
-Bundle "Lokaltog/vim-easymotion"            
+Bundle "haya14busa/incsearch.vim"
+Bundle "easymotion/vim-easymotion"            
+Bundle "haya14busa/incsearch-easymotion.vim"
 Bundle "kien/ctrlp.vim"                     
 Bundle "terryma/vim-expand-region"
 
@@ -37,9 +39,9 @@ Bundle "vim-scripts/ruby-matchit"
 Bundle "vim-ruby/vim-ruby"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-endwise"
-Bundle "kchmck/vim-coffee-script"
 
 " --- JS plugins
+Bundle "kchmck/vim-coffee-script"
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Bundle 'heartsentwined/vim-emblem'
