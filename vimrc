@@ -1,17 +1,18 @@
+set encoding=utf-8
 set nocompatible                " choose no compatibility with legacy vi
 filetype off                    " Set this off whilst we do our Vundle thing
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle' 
+Bundle 'gmarik/vundle'
 
 " --- Motion utilities
-Bundle "vim-scripts/matchit.zip"            
+Bundle "vim-scripts/matchit.zip"
 Bundle "haya14busa/incsearch.vim"
-Bundle "easymotion/vim-easymotion"            
+Bundle "easymotion/vim-easymotion"
 Bundle "haya14busa/incsearch-easymotion.vim"
-Bundle "kien/ctrlp.vim"                     
+Bundle "ctrlpvim/ctrlp.vim"
 Bundle "terryma/vim-expand-region"
 
 " --- Interface tweaks
@@ -47,22 +48,27 @@ Plugin 'pangloss/vim-javascript'
 Bundle 'heartsentwined/vim-emblem'
 Bundle 'mustache/vim-mustache-handlebars'
 
+" --- Haskell
+Bundle "lukerandall/haskellmode-vim"
+Bundle "vim-scripts/haskell.vim"
+
 " --- General dev utils
 Bundle 'gee-forr/vim-slurper'
 Bundle 'EinfachToll/DidYouMean'
 Bundle 'dietsche/vim-lastplace'
-Bundle "airblade/vim-gitgutter"             
-Bundle "scrooloose/syntastic"               
-Bundle "tpope/vim-fugitive"                 
-Bundle "ervandew/supertab"                  
-Bundle "godlygeek/tabular"                  
-Bundle "majutsushi/tagbar"                  
-Bundle "tpope/vim-surround"                 
-Bundle "scrooloose/nerdtree"                
-Bundle "jistr/vim-nerdtree-tabs"
-Bundle "scrooloose/nerdcommenter"           
-Bundle "mileszs/ack.vim"                    
-Bundle "kana/vim-smartinput"                
+Bundle "airblade/vim-gitgutter"
+Bundle "scrooloose/syntastic"
+Bundle "tpope/vim-fugitive"
+Bundle "ervandew/supertab"
+Bundle "wellle/tmux-complete.vim"
+Bundle "godlygeek/tabular"
+Bundle "majutsushi/tagbar"
+Bundle "tpope/vim-surround"
+Bundle "scrooloose/nerdtree"
+"Bundle "jistr/vim-nerdtree-tabs"
+Bundle "scrooloose/nerdcommenter"
+Bundle "mileszs/ack.vim"
+Bundle "kana/vim-smartinput"
 Bundle "Yggdroot/indentLine"
 "Bundle 'kien/rainbow_parentheses.vim'       " Colour parens depending on nesting
 Bundle 'closetag.vim'
@@ -74,7 +80,10 @@ Bundle "chase/vim-ansible-yaml"
 " Snippet management
 "Bundle "MarcWeber/vim-addon-mw-utils"
 "Bundle "tomtom/tlib_vim"
-"Bundle "garbas/vim-snipmate"              
+"Bundle "garbas/vim-snipmate"
+
+" Vim Dev Icons. Needs to be included last
+Bundle "ryanoasis/vim-devicons"
 
 au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 
@@ -82,7 +91,6 @@ au BufWritePost .vimrc so ~/.vimrc " automatically reload vimrc when it's saved
 "set clipboard=unnamed           " send yanks to the OS clipboard
 set mouse=a
 set nobackup                    " Do not keep a backup file
-set encoding=utf-8
 set showcmd                     " display incomplete commands
 set scrolloff=7                 " Never scroll to the edge of the window
 set history=50                  " Keep the last 50 commands
@@ -126,7 +134,7 @@ set wildignore+=*/.hg/*,*/.svn/*,*.swp,*.swo
 set bg=dark                     " Dark background
 colorscheme gruvbox
 
-set t_Co=256                    " 256 colours
+"set t_Co=256                    " 256 colours
 set cursorline                  " Highlight current line
 set ruler                       " Show a ruler
 set relativenumber              " Show lines numbers relative to where you are
@@ -143,12 +151,12 @@ function! CurDir()
   return curdir
 endfunction
 set laststatus=2                " Show statusline on second last line
-set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\ 
+set statusline=\ [%F%m%r%h\ %w]\ \ \ [CWD:%r%{CurDir()}%h]\ \ \ [Type=%Y]\ \ \ %{fugitive#statusline()}\ \ \ [Line:%l/%L:%c\ %p%%]\
 
 "" Tab shortcuts
-map <leader>tn :tabnew 
-map <leader>tm :tabmove 
-map <leader>te :tabe 
+map <leader>tn :tabnew
+map <leader>tm :tabmove
+map <leader>te :tabe
 map <leader>tc :tabclose<cr>    " Close
 map <leader><right> :tabn<cr>   " Select tab to the right
 map <leader><left> :tabp<cr>    " Select tab to the left
