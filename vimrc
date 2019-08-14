@@ -13,16 +13,17 @@ Bundle "haya14busa/incsearch.vim"
 Bundle "easymotion/vim-easymotion"
 Bundle "haya14busa/incsearch-easymotion.vim"
 Bundle "ctrlpvim/ctrlp.vim"
-Bundle "terryma/vim-expand-region"
+"Bundle "terryma/vim-expand-region"
 
 " --- Interface tweaks
 "Bundle "mhinz/vim-startify"
 Bundle "sjl/vitality.vim"
 Bundle "bling/vim-airline"
+Bundle "vim-airline/vim-airline-themes"
 Bundle 'edkolev/tmuxline.vim'
 
 " --- Colour schemes
-Bundle "altercation/vim-colors-solarized"
+"Bundle "altercation/vim-colors-solarized"
 Bundle 'morhetz/gruvbox'
 "Bundle "junegunn/seoul256.vim"
 "Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
@@ -42,25 +43,27 @@ Bundle "tpope/vim-rails"
 Bundle "tpope/vim-endwise"
 
 " --- JS plugins
-Bundle "kchmck/vim-coffee-script"
+"Bundle "kchmck/vim-coffee-script"
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
-Bundle 'heartsentwined/vim-emblem'
+"Bundle 'heartsentwined/vim-emblem'
 Bundle 'mustache/vim-mustache-handlebars'
+"Bundle 'mxw/vim-jsx'
 
 " --- Haskell
-Bundle "lukerandall/haskellmode-vim"
-Bundle "vim-scripts/haskell.vim"
+"Bundle "lukerandall/haskellmode-vim"
+"Bundle "vim-scripts/haskell.vim"
 
 " --- General dev utils
 Bundle 'gee-forr/vim-slurper'
 Bundle 'EinfachToll/DidYouMean'
 Bundle 'dietsche/vim-lastplace'
 Bundle "airblade/vim-gitgutter"
-Bundle "scrooloose/syntastic"
+"Bundle "scrooloose/syntastic"
+Bundle "benekastah/neomake"
 Bundle "tpope/vim-fugitive"
 Bundle "ervandew/supertab"
-Bundle "wellle/tmux-complete.vim"
+"Bundle "wellle/tmux-complete.vim"
 Bundle "godlygeek/tabular"
 Bundle "majutsushi/tagbar"
 Bundle "tpope/vim-surround"
@@ -141,7 +144,7 @@ set relativenumber              " Show lines numbers relative to where you are
 au InsertEnter * :set nu        " absolute line numbers in insert mode,
 au InsertLeave * :set rnu       " relative otherwise for easy movement
 set showmatch                   " Show matching brackets
-set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
+"set guifont=Inconsolata:h18     "Set the font to Inconsolata at 18pt. (Yes, it's huge)
 "set bg=light                    " Light background
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮ " Make the list chars less hideous (and more like textmate)
 set showbreak=↪
@@ -191,3 +194,4 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
 " Abbreviations
 iabbrev trye true
+iabbrev tiem item
